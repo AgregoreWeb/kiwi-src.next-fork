@@ -2190,7 +2190,7 @@ public class ChromeTabbedActivity extends ChromeActivity<ChromeActivityComponent
             getCurrentTabModel().closeTab(currentTab);
             return true;
         }
-        final boolean extensionUrl = currentTab.getUrl().getSpec().startsWith("chrome-extension://") || currentTab.getUrl().getSpec().startsWith("kiwi-extension://");
+        final boolean extensionUrl = currentTab.getUrl().getSpec().startsWith("chrome-extension://") || currentTab.getUrl().getSpec().startsWith("agregore-extension://");
         if (type == TabLaunchType.FROM_CHROME_UI && extensionUrl) {
             getCurrentTabModel().closeTab(currentTab);
             return true;

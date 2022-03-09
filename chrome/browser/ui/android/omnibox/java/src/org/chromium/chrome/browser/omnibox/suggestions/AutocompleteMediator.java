@@ -727,10 +727,10 @@ class AutocompleteMediator implements OnSuggestionsReceivedListener,
     void loadTypedOmniboxText(long eventTime) {
         String urlText = mUrlBarEditingTextProvider.getTextWithAutocomplete();
         if (urlText.startsWith("chrome://")) {
-          urlText = UrlBarData.replaceOnce(urlText, "chrome://", "kiwi://");
+          urlText = UrlBarData.replaceOnce(urlText, "chrome://", "agregore://");
         }
         if (urlText.startsWith("chrome-extension://")) {
-          urlText = UrlBarData.replaceOnce(urlText, "chrome-extension://", "kiwi-extension://");
+          urlText = UrlBarData.replaceOnce(urlText, "chrome-extension://", "agregore-extension://");
         }
         final String urlTextToLoad = urlText;
         cancelAutocompleteRequests();
@@ -830,10 +830,10 @@ class AutocompleteMediator implements OnSuggestionsReceivedListener,
         if (url.getSpec().contains(".kiwibrowser.org"))
           transition = PageTransition.AUTO_SUBFRAME;
         String newUrl = url.getSpec();
-        if (newUrl.startsWith("kiwi://"))
-          newUrl = newUrl.replaceFirst("kiwi://", "chrome://");
-        if (newUrl.startsWith("kiwi-extension://"))
-          newUrl = newUrl.replaceFirst("kiwi-extension://", "chrome-extension://");
+        if (newUrl.startsWith("agregore://"))
+          newUrl = newUrl.replaceFirst("agregore://", "chrome://");
+        if (newUrl.startsWith("agregore-extension://"))
+          newUrl = newUrl.replaceFirst("agregore-extension://", "chrome-extension://");
         if (suggestion.getDisplayText().startsWith("!")) {
            newUrl = "https://www.duckduckgo.com/?q=" + URLEncoder.encode(suggestion.getDisplayText());
         }

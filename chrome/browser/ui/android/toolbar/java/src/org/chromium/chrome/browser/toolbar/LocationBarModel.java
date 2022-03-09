@@ -521,7 +521,7 @@ public class LocationBarModel implements ToolbarDataProvider, LocationBarDataPro
     @VisibleForTesting
     @ConnectionSecurityLevel
     int getSecurityLevel(Tab tab, boolean isOfflinePage, @Nullable String publisherUrl) {
-        if (tab == null || isOfflinePage || (!TextUtils.isEmpty(tab.getUrl().getSpec()) && (tab.getUrl().getSpec().startsWith("chrome-extension") || tab.getUrl().getSpec().startsWith("devtools") || tab.getUrl().getSpec().startsWith("kiwi-extension")))) {
+        if (tab == null || isOfflinePage || (!TextUtils.isEmpty(tab.getUrl().getSpec()) && (tab.getUrl().getSpec().startsWith("chrome-extension") || tab.getUrl().getSpec().startsWith("devtools") || tab.getUrl().getSpec().startsWith("agregore-extension")))) {
             return ConnectionSecurityLevel.NONE;
         }
 
@@ -575,7 +575,7 @@ public class LocationBarModel implements ToolbarDataProvider, LocationBarDataPro
         String currentUrl = getCurrentUrl();
         if (currentUrl != null && currentUrl.startsWith("chrome-search://"))
             skipIconForNeutralState = true;
-        if (currentUrl != null && currentUrl.startsWith("kiwi-search://"))
+        if (currentUrl != null && currentUrl.startsWith("agregore-search://"))
             skipIconForNeutralState = true;
 
         boolean useLockIconEnabled = false;
