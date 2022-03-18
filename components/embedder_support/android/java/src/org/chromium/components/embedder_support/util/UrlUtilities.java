@@ -55,7 +55,7 @@ public class UrlUtilities {
      */
     private static final HashSet<String> INTERNAL_SCHEMES =
             CollectionUtil.newHashSet(UrlConstants.CHROME_SCHEME, UrlConstants.CHROME_NATIVE_SCHEME,
-                    ContentUrlConstants.ABOUT_SCHEME, "chrome-search", "kiwi", "kiwi-search", "devtools", "chrome-extension");
+                    ContentUrlConstants.ABOUT_SCHEME, "chrome-search", "agregore", "agregore-search", "devtools", "chrome-extension");
 
     private static final String TEL_SCHEME = "tel";
 
@@ -121,7 +121,7 @@ public class UrlUtilities {
           return true;
         if (gurl.getSpec().startsWith("chrome-search://"))
           return true;
-        if (gurl.getSpec().startsWith("kiwi-search://"))
+        if (gurl.getSpec().startsWith("agregore-search://"))
           return true;
         return INTERNAL_SCHEMES.contains(gurl.getScheme());
     }
@@ -280,7 +280,7 @@ public class UrlUtilities {
           return true;
         if (gurl.getSpec().startsWith("chrome-search://"))
           return true;
-        if (gurl.getSpec().startsWith("kiwi-search://"))
+        if (gurl.getSpec().startsWith("agregore-search://"))
           return true;
         return UrlConstants.NTP_HOST.equals(gurl.getHost());
     }
@@ -324,9 +324,9 @@ public class UrlUtilities {
                 || TextUtils.equals(url, "chrome-search://local-ntp/local-ntp.html")
                 || TextUtils.equals(url, "chrome-search://local-ntp/incognito-ntp.html")
                 || TextUtils.equals(url, "chrome-search://local-ntp/new-ntp.html")
-                || TextUtils.equals(url, "kiwi-search://local-ntp/local-ntp.html")
-                || TextUtils.equals(url, "kiwi-search://local-ntp/incognito-ntp.html")
-                || TextUtils.equals(url, "kiwi-search://local-ntp/new-ntp.html");
+                || TextUtils.equals(url, "agregore-search://local-ntp/local-ntp.html")
+                || TextUtils.equals(url, "agregore-search://local-ntp/incognito-ntp.html")
+                || TextUtils.equals(url, "agregore-search://local-ntp/new-ntp.html");
     }
 
     public static String extractPublisherFromPublisherUrl(String publisherUrl) {

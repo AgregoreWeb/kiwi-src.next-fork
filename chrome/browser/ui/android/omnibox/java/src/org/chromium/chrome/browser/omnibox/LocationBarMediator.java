@@ -1299,11 +1299,11 @@ class LocationBarMediator
 
     @Override
     public void loadUrlFromVoice(String url) {
-        if (url.startsWith("kiwi://")) {
-          url = UrlBarData.replaceOnce(url, "kiwi://", "chrome://");
+        if (url.startsWith("agregore://")) {
+          url = UrlBarData.replaceOnce(url, "agregore://", "chrome://");
         }
-        if (url.startsWith("kiwi-extension://")) {
-          url = UrlBarData.replaceOnce(url, "kiwi-extension://", "chrome-extension://");
+        if (url.startsWith("agregore-extension://")) {
+          url = UrlBarData.replaceOnce(url, "agregore-extension://", "chrome-extension://");
         }
         loadUrl(url, PageTransition.TYPED, 0);
     }
